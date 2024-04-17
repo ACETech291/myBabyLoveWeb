@@ -1,0 +1,50 @@
+:root {
+  --font-family: 'Pacifico', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  color: #CC313D;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  animation: fade-in 3s;
+}
+
+body { 
+    background-image: url('picture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+
+.heart {
+  position: fixed;
+  font-size: 1.5rem;
+  top: -1vh;
+  transform: translateY(0);
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  from {
+     transform: translateY(0vh) translateX(-10vw); 
+  }
+  to {
+     transform: translateY(105vh) translateX(10vw); 
+  }
+} 
+
+.text span {
+  animation: fade-in 2s;
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
